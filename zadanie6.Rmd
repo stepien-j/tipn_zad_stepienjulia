@@ -1,0 +1,88 @@
+---
+title: "Zack Efron"
+author: "Julia Stêpieñ"
+date: "29 maja 2018"
+output: html_document
+    theme: united
+    highlight: kate
+    df_print: paged
+
+# Zack Efron
+
+Amerykañski aktor i piosenkarz, a przy tym *niez³y przystojniak*.
+Urodzi³ siê 18 paŸdziernika 1987 roku w San Luis Obispo, w Kalifornii, a wychowa³ w okolicach Arroyo Grande. Karierê zacz¹³ w wieku 11 lat, kiedy to jego rodzice zwrócili uwagê na jego zdolnoœci wokalne.
+
+
+Powa¿niejsz¹ karierê aktorsk¹ rozpocz¹³ w roku 2002. S³awê zdoby³ dziêki roli Troya Boltona w filmach z serii High School Musical.
+
+![](zack.png)
+
+
+### Fajne filmy, w których wyst¹pi³:
+  
+  - High School Musical
+  - Baywatch S³oneczny patrol
+  - Charlie St. Cloud
+  - Znów mam 17 lat
+
+### Moje ulubione role Zacka Efrona
+
+1. Szczêœciarz - Logan Thibault (2012)
+2. Król rozrywki - Phillip (2017)
+3. Co Ty wiesz o swoim dziadku? - Jason Kelly (2016)
+
+### Dosta³ nawet kilka nagród:
+  
+| rok | nagroda | za co? |
+|------|-------------------------|-----------------------------------------------------------|
+| 2016 | nominacja Teen Choice | Najlepszy filmowy wybuch z³oœci za film S¹siedzi 2 (2016) |
+| 2017 | nominacja Z³oty Popcorn | Najlepszy poca³unek za film Randka na weselu (2016) |
+| 2018 | nominacja Z³ota Malina | Najgorszy aktor za film Baywatch. S³oneczny patrol (2017) |
+
+Wszystkie filmy, nagrody i oceny mo¿na zobaczyæ na tej stronie:
+[Zack Efron](http://www.filmweb.pl/person/Zac+Efron-273057)
+
+### Ciekawostki:
+  1. By³ zarêczony z aktork¹ Vaness¹ Hudgens.
+  2. Bra³ udzia³ w castingu do jednej z ról w filmie "Star Wars: Episode VII".
+  3. W 2011 roku zaj¹³ drugie miejsce w rankingu "Most Beautiful" magazynu "People".
+  4. Po przes³uchaniu re¿yser M. Night Shyamalan zaproponowa³ mu rolê Sokki w filmie "Ostatni W³adca Wiatru", jednak odmówi³, ze wzglêdu na termin realizacji projektu i anga¿ otrzyma³ Jackson Rathbone. 
+  5. By³ brany pod uwagê do roli Petera Parkera w filmie "Niesamowity Spider-Man". Ostatecznie anga¿ otrzyma³ Andrew Garfield. 
+
+
+### Tu wklejam jakieœ cytowanie kodu zupe³nie niezwi¹zane z Zackiem:
+```
+{r echo=FALSE, message=FALSE, warning=FALSE}
+library(tidyverse)
+library(ggplot2)
+mpg
+ggplot(data = mpg, aes(x = class, y = displ)) +
+geom_boxplot() 
+coord_flip() +
+labs(title = "auta", x = "klasa", y = "pojemnoœæ")
+```
+
+### Tu te¿ coœ fajnego:
+  ```
+{r echo=FALSE, message=FALSE, warning=FALSE}
+library(tidyverse)
+diamonds
+data(diamonds)
+select(diamonds, carat)
+```
+
+
+```{r echo=FALSE}
+library(ggplot2)
+ggplot(data = mpg) +
+geom_point(mapping = aes(x = displ , y = cty))
+```
+```{r echo=FALSE}
+library(tidyverse)
+diamonds %>% filter(cut == "Very Good")
+```
+```{r include=FALSE}
+ggplot(data = mpg) +
+  geom_histogram(mapping  = aes(displ), bins = 10) +
+  labs(title = "Auta", x = "pojemnoœæ", y = "iloœæ samochodów")
+```
